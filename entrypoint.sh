@@ -22,7 +22,7 @@ echo "Current Tidelift CLI version"
 ./tidelift version
 
 echo "Uploading manifests for alignment"
-./tidelift alignment save --revision ${GITHUB_SHA} --branch ${GITHUB_REF##*/} --directory ${GITHUB_WORKSPACE}
+./tidelift alignment save --revision ${GITHUB_SHA} --branch ${GITHUB_REF##*/} --directory ${GITHUB_WORKSPACE} -R
 echo "Waiting for the alignment to start"
 sleep 15
 ./tidelift status --wait ${GITHUB_SHA}
